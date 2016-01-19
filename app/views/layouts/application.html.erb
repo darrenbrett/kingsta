@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	
+			<header id="main-nav" class="clearfix">
+			<%= link_to "Darren Brett King", root_path, class: "name" %>
+			<nav>
+				<%= link_to "Musings", musings_path %>
+				<%= link_to "Projects", projects_path %>
+				<%= link_to "Contact", contact_path %>
+			</nav>
+		</header>
 
 <%= yield %>
+
+		<footer id="main-footer">
+			<p class="copyright">&copy; 2016 Darren King</p>
+			<nav>
+				<a href="http://pixelcurb.com" target=_blank><i class="fa fa-twitter"></i></a>
+				<a href="http://facebook.com/darrenbrettking"><i class="fa fa-facebook" target=_blank></i></a>
+				<a href="#"><i class="fa fa-github" target=_blank></i></a>
+			</nav>
+		</footer>
 
 </body>
 </html>

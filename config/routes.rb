@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   
   resources :posts
+  get 'welcome/index'
+  root 'welcome#index'
 
-  root 'static_pages#home'
   
   match '/musings',   to: 'static_pages#musings',        via: 'get'
   match '/projects',  to: 'static_pages#projects',       via: 'get'
