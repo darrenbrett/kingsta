@@ -5,7 +5,17 @@
 				<hr>
 			</header>
 			
-			<div id="content"><%= markdown @post.content %></div>
+			<div id="content">
+				<%= markdown @post.content %>
+			</div>
+			
+			<% if user_signed_in? %>
+				<div id="admin-links">
+					<%= link_to "Edit", edit_post_path %>
+					<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+					
+				</div>
+			<% end %>
 		
 		<hr>
 		
@@ -22,5 +32,3 @@
 		
 		</div>
 		
-		<%= link_to "Edit", edit_post_path %>
-		<%= link_to "Delete", method: :destroy, data: { confirm: "Are you sure?" }%>

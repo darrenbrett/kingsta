@@ -59,6 +59,12 @@ body {
   display: none;
 }
 
+.notice, .alert {
+  text-align: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $dark;
 }
@@ -293,7 +299,21 @@ hr {
   }
 }
 
-
+#admin-links {
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  text-align: center;
+  padding: 1em 0;
+  margin: 3em 0;
+  a {
+    color: $light;
+    margin: 0 1em;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
 
 
 
