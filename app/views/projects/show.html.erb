@@ -1,0 +1,26 @@
+<div id="post-show-content" class="skinny-wrapper">
+			<header>
+				<p class="date"><%= @project.created_at.strftime('%A, %b, %d')%></p>
+				<h1><%= @project.title %></h1>
+				<hr>
+			</header>
+			
+			<div id="content"><%= markdown @project.description %>
+				
+				<div class="button-wrapper">
+					<a href="<%= @project.link %>" class="project-button", target="_blank"> Visit <%= 								@project.title %></a>
+				</div>
+			
+			</div>
+		
+		<hr>
+		
+		<div id="share-box">
+			<p>Share the DO List</p>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-google-plus"></i></a>
+		</div>
+		
+		<hr>
+		</div>
